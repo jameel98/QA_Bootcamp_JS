@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explode Example</title>
+  </head>
+
+  <body>
+    <button onclick="explode(shineLight, makeSound, 'BOOM')">Explode</button>
+    <div id="box" style="width: 100px; height: 100px"></div>
+
+    <script>
+      const explode = (lightFunc, soundFunc, sound) => {
+        lightFunc();
+        soundFunc(sound);
+      };
+
+      const shineLight = () =>
+        (document.getElementById("box").style.backgroundColor = "yellow");
+
+      const makeSound = (sound) => console.log(sound);
+    </script>
+  </body>
+</html>
